@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse Road – Contact Us</title>
+    <link rel="stylesheet" href="/JavaScript_Activity/css/contactStyle.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+  <nav>
+    <div class="logo-title">
+      <img src="/JavaScript_Activity/WEB_PICTURES/TrLogo.jpg" alt="Traverse Road Logo" class="logo" />
+      <h1>Traverse Road</h1>
+    </div>
+    <ul>
+      <li><a href="/JavaScript_Activity/html/home.html">Home</a></li>
+      <li><a href="/JavaScript_Activity/html/galleries.html">Galleries</a></li>
+      <li><a href="/JavaScript_Activity/html/tips.html" class="active">Travel Tips</a></li>
+      <li><a href="/JavaScript_Activity/html/blog.html">Blog</a></li>
+      <li><a href="/JavaScript_Activity/html/contactus.html">Contact Info</a></li>
+      <li><a href="/JavaScript_Activity/html/aboutus.html">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+   <section class="contact-box" id="contactSection">
+        <h1>Contact us</h1>
+        <p>We would love to hear from you</p>
+
+        <form id="contactForm">
+          <form action="mailto:traverseroad0@gmail.com" method="post" enctype="text/plain">
+  <div class="row">
+    <input type="text" name="Name" placeholder="Name:" required>
+    <input type="email" name="Email" placeholder="Email:" required>
+  </div>
+  <input type="text" name="Subject" placeholder="Subject:" class="full">
+  <textarea name="Message" placeholder="Message:" class="full"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+    </section>
+
+   
+    <section id="successPage" class="success-page">
+    <div class="check-icon">✔</div>
+    <h1>You successfully sent your message!</h1>
+</section>
+
+   <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        
+        document.getElementById("contactSection").style.display = "none";
+
+        
+        document.getElementById("successPage").style.display = "flex";
+
+        
+        document.getElementById("contactForm").reset();
+
+        
+        setTimeout(function() {
+            document.getElementById("successPage").style.display = "none";
+          
+            document.getElementById("contactSection").style.display = "block";
+        }, 2000);
+    });
+</script>
+
+
+
+      <footer class="traverse-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Adventure awaits in Tarlac</h3>
+        <p>Find your next destination – from mountains to churches!</p>
+      </div>
+      <div class="footer-right">
+        <p><a href="mailto:traverseroad0@gmail.com">TraverseRoad@gmail.com</a></p>
+        <p> Tarlac, Philippines</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61584420647749"><img src="/JavaScript_Activity/WEB_PICTURES/FBLogo.png" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/traverse_road?igsh=MTVxY2cxNzkxeXhkbA=="><img src="/JavaScript_Activity/WEB_PICTURES/IGLogo.png" alt="Instagram" /></a>
+          <a href="https://www.tiktok.com/@traverseroad"><img src="/JavaScript_Activity/WEB_PICTURES/TTLogo.png" alt="TikTok" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
